@@ -7,7 +7,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
 
 public class SortData {
-    public String fullName;
+    private String fullName;
     private String firstName;
     private String lastName;
     private  String patronymic;
@@ -20,57 +20,37 @@ public class SortData {
         return fullName;
     }
 
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
-    }
 
     public String getFirstName() {
         return firstName;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
 
     public String getLastName() {
         return lastName;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
 
     public String getPatronymic() {
         return patronymic;
     }
 
-    public void setPatronymic(String patronymic) {
-        this.patronymic = patronymic;
-    }
 
     public long getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(int phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
 
     public char getGender() {
         return gender;
     }
 
-    public void setGender(char gender) {
-        this.gender = gender;
-    }
 
     public LocalDate getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(LocalDate birthday) {
-        this.birthday = birthday;
-    }
+
 
     public void sortFio(String[] array) throws FioException{
         String[] fio = new String[3];

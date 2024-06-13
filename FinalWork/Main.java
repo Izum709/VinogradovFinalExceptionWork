@@ -3,14 +3,14 @@ package JavaRush.myExeption.FinalWork;
 import java.io.IOException;
 import java.util.Arrays;
 
-/*Урок 3. Продвинутая работа с исключениями в Java
+/*Урок 3. Продвинутая работа с исключениями в Java.
 Напишите приложение, которое будет запрашивать у пользователя следующие данные, разделенные пробелом:
 
 Фамилия Имя Отчество дата _ рождения номер _ телефона пол
 
 Форматы данных:
 
-фамилия, имя, отчество - строки
+Фамилия, имя, отчество - строки
 дата _ рождения - строка формата dd.mm.yyyy
 номер _ телефона - целое беззнаковое число без форматирования
 пол - символ латиницей f или m.
@@ -39,7 +39,7 @@ public class Main {
             String[] a = start.startProgram();
             System.out.println(Arrays.toString(a)+" "+a.length);
             sortData.sortFio(a);
-            System.out.println("fio - "+sortData.fullName);
+            System.out.println("fio - "+sortData.getFullName());
             System.out.println(sortData.getFirstName()+" "+sortData.getLastName()+" "+sortData.getPatronymic());
             sortData.sortGender(a);
             System.out.println("gender - "+sortData.getGender());
@@ -52,7 +52,7 @@ public class Main {
         }catch (LengthException | FioException | GenderException | PhoneNumberException | BirthdayException e){
             System.out.println(e.getMessage());
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            System.out.println(Arrays.toString(e.getStackTrace()));;
         }
     }
 }
