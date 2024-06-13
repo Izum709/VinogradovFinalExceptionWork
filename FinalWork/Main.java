@@ -52,7 +52,7 @@ public class Main {
         }catch (LengthException | FioException | GenderException | PhoneNumberException | BirthdayException e){
             System.out.println(e.getMessage());
         } catch (IOException e) {
-            System.out.println(Arrays.toString(e.getStackTrace()));;
+            System.out.println(Arrays.toString(e.getStackTrace()));
         }
     }
 }

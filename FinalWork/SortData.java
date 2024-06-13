@@ -55,7 +55,7 @@ public class SortData {
     public void sortFio(String[] array) throws FioException{
         String[] fio = new String[3];
         for (String s : array){
-            if(s.trim().matches("[ А-я ]+")){
+            if(s.trim().matches("[ А-я]+")){
                 fio = s.split(" ");
                 if(fio.length != 3){
                     throw new FioException("ФИО введено не полностью");
